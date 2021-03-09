@@ -10,3 +10,7 @@ Phase 1 - Naming conventions
 - remove the hard-coded values aka "magic numbers"  //define static variables
 
 - add validations for input values //enum
+
+Phase 2 - KISS & Single Responsability 
+- simplify the expressions
+- a function should do only one thing
