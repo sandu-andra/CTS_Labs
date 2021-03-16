@@ -14,3 +14,7 @@ Phase 1 - Naming conventions
 Phase 2 - KISS & Single Responsability 
 - simplify the expressions
 - a function should do only one thing
+
+Phase 3 - Single Responsability & Dependency Inversion (DIP)
+- the static final values may change when the marketing strategy will change
+- getFidelityDiscount() may change when the marketing strategy will change

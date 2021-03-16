@@ -1,12 +1,34 @@
-package ro.ase.csie.cts.g1094.refactor.phase2;
+package ro.ase.csie.cts.g1094.refactor.phase3;
 
 import ro.ase.csie.cts.g1094.refactor.exceptions.InvalidAgeException;
 import ro.ase.csie.cts.g1094.refactor.exceptions.InvalidPriceException;
+import ro.ase.csie.cts.g1094.refactor.phase3.services.Marketing2021Strategy;
+import ro.ase.csie.cts.g1094.refactor.phase3.services.MarketingServiceInterface;
+
 
 public class Product {
-      public static final int	MAX_AGE_ACCOUNT=10;
-      public static final float MAX_FIDELITY_DISCOUNT= 0.15f;
+	
+	  MarketingServiceInterface mkService = null;
+   
+	  public Product(MarketingServiceInterface mkService) {
+//		  if(mkService == null) {
+//			  throw new NullPointerException();
+//		  }
+//		  
+//		  this.mkService = mkService;
+		  this.setMarketingService(mkService);
+	  }
+	  
 
+	//optional - based on design specs
+	  public void setMarketingService(MarketingServiceInterface mkService) {
+		  if(mkService == null) {
+			  throw new NullPointerException();
+		  }
+		  
+		  this.mkService = mkService;
+	  }
+	  
       private static float getDiscountValue(float price, float discount) {
 	         return discount * price;
       }
@@ -15,9 +37,7 @@ public class Product {
 	        return (price - discountValue) - fidelityDiscount * (price - discountValue);
       }
 
-      private static float getFidelityDiscount(int accountAge){
-	        return (accountAge > MAX_AGE_ACCOUNT) ? MAX_FIDELITY_DISCOUNT : (float)accountAge/100; 
-      } 
+  
 
      private static float getFinalPrice(float price, float fidelityDiscount, ProductType type) {
     	 
@@ -38,7 +58,7 @@ public class Product {
 		 
 	    float finalPrice = 0;
 	    
-	    float fidelityDiscount = (productType==ProductType.NEW) ? 0:getFidelityDiscount(accountAge);
+	    float fidelityDiscount = (productType==ProductType.NEW) ? 0: mkService.getFidelityDiscount(accountAge);
 	    
 	    finalPrice=getFinalPrice(initialPrice,fidelityDiscount, productType );
 	    
