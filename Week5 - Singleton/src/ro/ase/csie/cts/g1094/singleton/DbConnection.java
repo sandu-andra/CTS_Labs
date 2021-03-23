@@ -24,6 +24,8 @@ public class DbConnection {
 		this.schema = schema;
 	}
 	
+	
+	//lazy-instantation of the unique object
 	public static DbConnection getConnection() {
 		if(DbConnection.connection == null) {
 			connection = new DbConnection();
