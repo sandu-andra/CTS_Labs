@@ -1,0 +1,68 @@
+Code Review for my Homework
+
+Code formatting
+
+   NAMING CONVENTIONS (Capitalization and naming convention)
+        Most of the variables do not have a clear name and do not respect the specific "lowerCamelCase" format. 
+        Also the functions don't have proper names so we cannot understand exactly what each function does.
+        
+   - rename package from 'assignment' to a specific proper name 'package ro.ase.csie.g1094.SanduAndra.hw1.initalPhase';
+   Variables:
+   - rename loan_value to loanValue (we have to use lowerCamelCase)
+   - rename rate to rateValue
+   - rename daysActive to accountDays
+   - rename account_type to accountType
+   - rename value to newLoanValue
+   - rename temp variable to daysPerYear
+   - rename totalFee variable to totalFeeFromPremiumAccounts
+    Functions
+   - rename function loan to getLoanValue
+   - rename function getRate to getRateValue
+   - rename function setValue to setNewLoanValue
+   - rename function print to checkAccount
+   - rename function calculate to calculateTotalFeeFromPremiumTypeAccounts
+   - rename to String function in order to be clear what does the function display
+      
+   I have also formatted the code (Indentation, White space, Style and spelling of functions)
+   Code should fit in the standard 14 inch laptop screen. There shouldn’t be a need to scroll horizontally to view the code
+   I have deleted the comments (they are not necessary in our case)
+   I have deleted the variables which are not necessary (ex: vb =10;)
+
+Coding best practices
+
+  - I have added the AccountType enum for the account types. Also we do not need the values  0,1,2,3
+  - remove the hard-coded values aka "magic numbers"  by defining static variables (for number of days in a year and broker's fee)
+
+   EXCEPTIONS:
+   - I have added InvalidLoanException (for a loan that is less than 0)
+   - I have added InvalidRateValueException ( for a rate that is less than 0)
+   - I have added the Services package that contains ValidatorService which implements ValidatorServiceInterface in order to 
+   validate the loan and the rate 
+     => we should not have a negative loan/rate
+     
+   INTERFACES  
+    - I have added a new interface that contains a method for computing monthly rate and the I have override I AccountDetails class
+     
+   - I have divided the Account class in two classes: AccountDetails and LoanDetails in order to simplify the class and arrange the 
+   code
+        => I have changed the visibility from public to private (in both classes and then I have generated get and set methods in 
+        order to be able to access them in other places)  
+        
+YAGNI principle
+- we do not need all print methods (should be removed)
+- I have generated ToString methods and renamed them accordingly
+
+KISS 
+- simplify the expressions
+
+Single Responsability 
+- a function should do only one thing ( I have modified the calculateTotalFeeFromPremiumTypeAccounts and used another 3 functions)
+- we do not need the Account class there, we can just use accounts[i]
+- functions should be small and do only one thing
+
+
+
+
+
+
+ 
