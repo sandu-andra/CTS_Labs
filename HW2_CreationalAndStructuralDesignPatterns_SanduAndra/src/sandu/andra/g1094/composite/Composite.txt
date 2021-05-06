@@ -1,0 +1,17 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Composite Pattern:
+    Consider the scenario in which in our clinic the doctors have different levels. The most important level is 
+    represented by “The head of the department” and under them, there are attending physicians, fellows and medical 
+    students, like a tree structure. Each of the doctors has to perform the common method – getAccountDetails().
+    
+Advantages for the solution:
+   - easy-to-understand program code
+   - Provides everything to display strongly nested object structures
+   - Great expandability
+   
+Disadvantages for the solution:
+   - sometimes, it is difficult to restrict the components of the tree to only particular types
+   - once the tree structure is defined, the composite design makes the tree overly general
+   - the implementation of component interfaces is very tricky

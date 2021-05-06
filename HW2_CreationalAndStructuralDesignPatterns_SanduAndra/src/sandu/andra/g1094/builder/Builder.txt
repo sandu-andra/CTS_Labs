@@ -1,0 +1,18 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Builder Pattern:
+    In order to have in my clinic's database all the information needed, the doctor class contains lots of 
+    attributes: id, name, email, address, phone, isMale, specialization, level, blood group, education.
+    We should find an efficient solution that will allow us to create the doctor, without giving values for
+    all the attributes, but also without allowing the programmers to omit some of the attributes. All attributes
+    are important for us.
+
+Advantages for the solution:
+    -Builder supports changing the internal representation of objects
+    -Builder offers clear separation between the construction and representation of an object
+    -Builder offers better control over construction process
+
+Disadvantages for the solution:
+    - Builder needs to copy all fields from the initial class (verbose and code duplication)
+    - Builder you want to create a new object, you must first create its builder (this could represent a problem in some cases)

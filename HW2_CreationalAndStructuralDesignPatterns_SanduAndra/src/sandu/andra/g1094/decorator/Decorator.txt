@@ -1,0 +1,18 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Decorator Pattern:
+     We want to change the characteristics of some appointments.The decoration does not change the object itself,
+     it’s just something in addition.
+
+Advantages for the solution:
+    - You add functionality using many simple classes, so the code is simplified
+    - More flexible than inheritance
+    - it allows behavior modification at runtime (you do not need to go back into existing code and make the specidic changes)
+    
+Disadvantages for the solution:
+    - Decorators can complicate the process of instantiating the component because you not only have to instantiate 
+      the component, but also wrap it in a number of decorators
+    - It can be complicated to have decorators keep track of other decorators because to look back into multiple layers
+      of the decorator chain starts to push the decorator pattern beyond its true intent
+    - Decorators can cause issues if the client relies heavily on the components concrete type

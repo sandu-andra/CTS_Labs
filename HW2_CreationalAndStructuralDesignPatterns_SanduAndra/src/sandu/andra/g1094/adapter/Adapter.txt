@@ -1,0 +1,21 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Adapter Pattern:
+    Let’s consider the scenario in which, in my clinic, the pharmacist is the one that can modify the quantity or change 
+    the name of the medical products that can be found in the online pharmacy.
+    The Admin is the one that can add a new medical product or delete an existing one.
+    Let’s assume that we want to let the Pharamacist to delete or to add new medical products, but we also want to keep 
+    his responsability of updating the quantity or the name of the medical products.
+ 
+Advantages for the solution:
+    - you use a different interface, and you can use polymorphism to swap between different implementations of adapters,
+      so the client class is not complicated 
+    - achieve reusability and flexibility
+    - Adapter can add functionality to many Adaptees. CustomerAdapter can be more abstract and adapter more than just
+      customer object
+      
+Disadvantages for the solution:
+    - Sometimes many adaptations are required along an adapter chain to reach the type which is required
+    - All requests are forwarded, so there is a slight increase in the overhead
+    - Harder to override Adaptee behavior. Customer object behavior can’t be changed without subclassing it

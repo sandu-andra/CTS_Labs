@@ -1,0 +1,20 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Prototype Pattern:
+   In my private clinic, an instance of a patient can appear in multiple places. That being said, there should be 
+   find a way in which we can create multiple instances of the same patient, using an efficient solution.
+   
+Advantages for the solution:
+   - It lets you add or remove objects at runtime
+   - The clients can get new objects without knowing which type of object it will be.
+   - It hides complexities of creating objects
+   
+Disadvantages for the solution:
+   - Each subclass of Prototype must implement the clone() operation which may be difficult, when the classes under 
+   consideration already exist. 
+   - Cloning complex objects that have circular references might be very tricky.
+   - In case of a project that uses very few objects and/or does not have an underlying emphasis on the extension of 
+   prototype chains, it means overkill
+
+   

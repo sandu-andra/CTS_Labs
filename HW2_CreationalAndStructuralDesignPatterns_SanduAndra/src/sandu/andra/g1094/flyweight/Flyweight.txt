@@ -1,0 +1,18 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Flyweight Pattern:
+    Consider the scenario in which in our clinic we want to have the possibility to manage efficiently (from a 
+    memory point of view) the fact that patients can have appointments at different departments. Keep in mind 
+    that the space occupied requires a significant memory space for the client and the appointments must be displayed
+    on the screen.
+    
+Advantages for the solution:
+   - it diminishes the memory footprint and saving RAM as the common properties are distributed between 
+     objects using Intrinsic properties
+   - it contributes to improving the performance of the application by reducing the number of objects
+     
+Disadvantages for the solution:
+   - If memory is not a concern, implementing Flyweight design can be overkill for the application
+   - code complexity
+   - the pattern is of no use, if there aren't shareable properties in an object

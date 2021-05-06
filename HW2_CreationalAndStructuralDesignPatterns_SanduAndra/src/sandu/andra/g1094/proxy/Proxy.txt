@@ -1,0 +1,17 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Proxy Pattern:
+    Consider the scenario in which in our clinic, the admins, the pharmacists and the doctors are the ones that have access to the 
+    internet inside the clinic. Consider the fact that the admin has the account type id 1, the doctor 2 and the pharmacist 3.  
+    The other accounts should not have access to the internet.
+    
+Advantages for the solution:
+    - you can easily control the service object ( clients don't know about it)
+    - you can introduce new proxies without changing the service or clients (OPEN/CLOSED PRINCIPLE)
+    - proxy avoids the object's duplication
+    
+Disadvantages for the solution:
+    - Complex implementation ( it may be possible that the code will be too complicated, because you have to introduce lots of classes)
+    - The response from the service might get delayed
+    - Less efficiency due to indirection

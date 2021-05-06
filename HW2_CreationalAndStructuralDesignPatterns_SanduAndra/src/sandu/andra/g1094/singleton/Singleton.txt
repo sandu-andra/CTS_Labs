@@ -1,0 +1,24 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Singleton Pattern:
+    Write an efficient solution of the management of the clinic board. 
+    The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance.
+    It is named after the singleton set, which is defined to be a set containing one element. 
+    The office of The Chief Executive Officer (the highest-level management position in a hospital/clinic system), represents 
+    a Singleton. There are specific means (exams, educational requirements, professional experience) by which a CEO is chosen.
+    As a result, there can be at most one active CEO at any given time. Regardless of the personal identity of the active CEO, 
+    the title, "The CEO of the Private Clinic" is a global point of access that identifies the person in the office. 
+    Programmers cannot build multiple objects associated with the title of “The CEO of Andra's Private Clinic”
+
+Advantages for the solution:
+    - Singleton has static initialization (memory is allocated to the variable at the time it is declared)
+    - Singleton provides a single point if access to a specific instance (easy to maintain)
+    - you can use the "lazy instantiation" (very helpful if the singleton class is resource intense)
+    - Singleton can be also inherited from other classes
+    
+Disadvantages for the solution:
+    - Singleton classes do not have the possibility to be sub classed
+    - Singletons can hide dependencies
+    - Singleton deviate from the Single Responsibility Principle. A singleton class has the responsibility to create an instance of 
+    itself along with other business responsibilities. 

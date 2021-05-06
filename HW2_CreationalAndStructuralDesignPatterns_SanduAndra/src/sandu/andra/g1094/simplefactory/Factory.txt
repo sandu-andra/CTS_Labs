@@ -1,0 +1,22 @@
+Title of bachelor topic: 
+    PRIVATE CLINIC MANAGEMENT SYSTEM
+    
+Description of the problem solved by Factory Pattern:
+   In the Clinic each doctor has a specific specialization. 
+   We should be able to create different specializations for the doctors. 
+   In this moment, there are 4 specializations: Gastroenterology, Cardiology, Anesthesiology, Dermatology. 
+   It may be possible, that in the future, in my clinic will be available new specializations or, why not, the ones 
+   that are currently available, will suffer changes. 
+
+Advantages for the solution:
+   - Factory provides an elegant way to abstract your code so there's less visual clutter
+   - Factory allows the sub-classes to choose the type of objects to create
+   - Factory provides approach to code for interface rather than implementation
+   - Factory provides abstraction between implementation and client classes through inheritance
+   - It allows you to introduce specialized, focused classes with a single purpose (which is great if you follow the SOLID principles)
+
+Disadvantages for the solution:
+   - clients might have to sub-class the creator class just to create a particular concrete product object.
+   - sub classing is fine when the client has to subclass the creator class anyway, but otherwise, the client now must deal with another point 
+   of evolution.
+   - the factory used for creating the objects is bound with the client code => it is difficult to use a different factory for creating objects   
