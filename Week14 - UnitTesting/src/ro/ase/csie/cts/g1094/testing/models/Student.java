@@ -34,10 +34,9 @@ public class Student {
 	}
 
 
-	public void setName(String name) throws WrongNameException{
-		if(name.length() < MIN_NAME_SIZE || name.length() > MAX_NAME_SIZE) {
+	public void setName(String name) throws WrongNameException {
+		if(name.length() < MIN_NAME_SIZE || name.length() > MAX_NAME_SIZE)		
 			throw new WrongNameException();
-		}
 		this.name = name;
 	}
 
@@ -47,16 +46,15 @@ public class Student {
 	}
 
 
-	public void setAge(int age) throws WrongAgeException{
-		if(age < MIN_AGE || age > MAX_AGE) {
+	public void setAge(int age) throws WrongAgeException {
+		if(age < MIN_AGE || age > MAX_AGE)
 			throw new WrongAgeException();
-		}
 		this.age = age;
 	}
 
 
-	public void setGrades(ArrayList<Integer> grades) throws WrongGradeException{
-		this.grades = grades;
+	public void setGrades(ArrayList<Integer> grades) throws WrongGradeException {
+		this.grades = (ArrayList<Integer>) grades.clone();
 	}
 	
 	
@@ -71,15 +69,28 @@ public class Student {
 
 	public float getGradesAverage() {
 		
-		if(this.grades == null || this.grades.size() == 0) {
+		if(this.grades == null || this.grades.size() == 0)
 			return 0;
-		}
 		
 		float sum = 0;
 		for(int grade : this.grades) {
 			sum += grade;
 		}
 		return sum/this.grades.size();
+		
 	}
 	
+	public int getMinGrade() {
+		if(this.grades == null || this.grades.size() == 0)
+			return 0;
+		
+		int min = this.grades.get(0);
+		for(int grade: grades) {
+			if(min > grade) {
+				min = grade;
+			}
+		}
+		return min;
+	}
+
 }
